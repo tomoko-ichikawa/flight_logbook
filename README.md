@@ -41,6 +41,12 @@ https://drive.google.com/open?id=17A-aCzzY06idYpveak_FpdLe_AdsxIiA
 https://drive.google.com/open?id=1VLEbYVdWZLl2wNPmixt8egPdk8KTThTM
 
 ## 使用予定Gem
+carrierwave  
+mini_magick  
+devise  
+Ransack  
+
+## 技術要件
 就業Termから
 - ログイン機能（Devise）
 - コメント機能（編集や削除もできること。投稿失敗時にエラーメッセージをAjaxで出力すること）
