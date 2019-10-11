@@ -41,5 +41,10 @@ https://drive.google.com/open?id=17A-aCzzY06idYpveak_FpdLe_AdsxIiA
 https://drive.google.com/open?id=1VLEbYVdWZLl2wNPmixt8egPdk8KTThTM
 
 ## 使用予定Gem
-就業Termから： carrierwave,mini_magick,devise  
-カリキュラム外から：　ransack  
+就業Termから
+- ログイン機能（Devise）
+- コメント機能（編集や削除もできること。投稿失敗時にエラーメッセージをAjaxで出力すること）
+- 画像投稿(carrierwave、mini_magick）
+
+カリキュラム外から
+- 検索機能（Ransackを使用。出発空港、到着空港、航空会社、座席クラスを検索）
