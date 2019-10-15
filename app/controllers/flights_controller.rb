@@ -19,6 +19,19 @@ class FlightsController < ApplicationController
   	@flight = Flight.find(params[:id])
   end
 
+  def edit
+    @flight = Flight.find(params[:id])
+  end
+
+  def update
+    @flight = Flight.find(params[:id])
+    if @flight.update(flight_params)
+      redirect_to flights_path,notice: "フライトログを編集しました"
+    else
+      render 'edit'
+    end
+  end
+
   private
 
   def flight_params
