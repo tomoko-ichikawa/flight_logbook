@@ -3,6 +3,7 @@ class FlightsController < ApplicationController
   before_action :authenticate_user!, except:[:index]
 
   def index
+    @flights = Flight.all
   end
 
   def new
