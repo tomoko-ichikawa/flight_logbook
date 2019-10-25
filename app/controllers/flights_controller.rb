@@ -1,5 +1,6 @@
 class FlightsController < ApplicationController
   before_action :set_flight, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except:[:index]
 
   def index
   end
@@ -14,6 +15,7 @@ class FlightsController < ApplicationController
 
   def create
   	@flight = Flight.create(flight_params)
+    @flight.user_id = current_user.id
     if @flight.save
       redirect_to new_flight_path
     else
@@ -27,6 +29,7 @@ class FlightsController < ApplicationController
 
   def show
   	@flight = Flight.find(params[:id])
+    @user = @flight.user
   end
 
   def edit
