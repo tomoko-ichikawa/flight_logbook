@@ -14,7 +14,7 @@ NULLCMD = :
 srcdir = .
 topdir = /Users/ichikawatomoko/.rbenv/versions/2.6.4/include/ruby-2.6.0
 hdrdir = $(topdir)
-arch_hdrdir = /Users/ichikawatomoko/.rbenv/versions/2.6.4/include/ruby-2.6.0/x86_64-darwin18
+arch_hdrdir = /Users/ichikawatomoko/.rbenv/versions/2.6.4/include/ruby-2.6.0/x86_64-darwin19
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
 prefix = $(DESTDIR)/Users/ichikawatomoko/.rbenv/versions/2.6.4
@@ -31,8 +31,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20191007-88307-1llv1uf
-sitelibdir = $(DESTDIR)./.gem.20191007-88307-1llv1uf
+sitearchdir = $(DESTDIR)./.gem.20191028-20384-4f0x6e
+sitelibdir = $(DESTDIR)./.gem.20191028-20384-4f0x6e
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -83,7 +83,7 @@ debugflags = -ggdb3
 warnflags = -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wmissing-noreturn -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens
 cppflags = 
 CCDLFLAGS = -fno-common
-CFLAGS   = $(CCDLFLAGS)  -O3 -Wno-error=shorten-64-to-32  -pipe -I.. -Wall -O3 -g -std=gnu99 $(ARCH_FLAG)
+CFLAGS   = $(CCDLFLAGS) $(cflags)  -pipe -I.. -Wall -O3 -g -std=gnu99 $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
 CPPFLAGS = -DHAVE_RUBY_ST_H -DHAVE_ST_H -DHAVE_RB_STR_REPLACE -DHAVE_RB_INTERN_STR -DHAVE_RB_SYM2STR -DHAVE_RB_STR_INTERN -DHAVE_RB_BLOCK_LAMBDA -DHAVE_RB_HASH_DUP -DHAVE_RB_HASH_CLEAR -I/Users/ichikawatomoko/.rbenv/versions/2.6.4/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
@@ -104,7 +104,7 @@ RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
 RUBYW_BASE_NAME = rubyw
 RUBY_BASE_NAME = ruby
 
-arch = x86_64-darwin18
+arch = x86_64-darwin19
 sitearch = $(arch)
 ruby_version = 2.6.0
 ruby = $(bindir)/$(RUBY_BASE_NAME)
