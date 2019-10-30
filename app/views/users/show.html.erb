@@ -1,6 +1,9 @@
 <h1>ユーザー詳細</h1>
 <hr>
 
+<p>name: <%= @user.name %></p>
+<p>profile: <%= @user.profile %></p>
+
 <% @flights.each do |flight| %>
   <hr>
   <p><span>email: </span><%= @user.email %></p>
